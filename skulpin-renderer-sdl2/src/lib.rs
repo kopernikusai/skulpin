@@ -29,6 +29,11 @@ impl<'a> Sdl2Window<'a> {
         let (_, dpi, _) = system.display_dpi(display_index).ok()?;
         Some((DEFAULT_DPI / dpi).into())
     }
+
+    #[inline]
+    pub fn get_sdl2_window(&self) -> &'a sdl2::video::Window {
+        &self.window
+    }
 }
 
 impl<'a> Window for Sdl2Window<'a> {
