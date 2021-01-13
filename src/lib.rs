@@ -55,3 +55,6 @@ pub use skulpin_renderer_sdl2;
 pub use skulpin_renderer_sdl2::sdl2;
 #[cfg(feature = "skulpin_sdl2")]
 pub use skulpin_renderer_sdl2::Sdl2Window;
+
+pub use time_state::TimeState;
+mod time_state;
